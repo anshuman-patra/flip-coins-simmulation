@@ -16,3 +16,24 @@ fi
 done
 echo " no of head " $hc
 echo "no of tails "$tc 
+if [[ $n -le 43 &&  $hc -ge 21 || $tc -ge 21 ]]
+then
+if [[ $hc -gt $tc ]]
+then
+sum=$(( $hc - $tc ))
+echo " win with head by difference of "$sum
+else
+sum=$(( $tc - $hc ))
+echo " win with the tail by differnece of "$sum
+fi
+elif [[ $hc -eq $tc ]]
+then 
+echo"draw"
+elif  [[ $hc -gt $tc ]]
+then
+sum=$(( $hc - $tc ))
+echo " win with head by difference of "$sum
+else
+sum=$(( $tc - $hc ))
+fi
+
